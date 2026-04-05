@@ -118,6 +118,20 @@ body{font-family:'Segoe UI',-apple-system,'Noto Sans KR',sans-serif;background:#
 .checklist h4{color:#0050b3;font-size:12px;margin-bottom:6px}.checklist label{display:block;margin-bottom:3px;cursor:pointer}
 .checklist input[type=checkbox]{margin-right:6px}
 footer{text-align:center;padding:16px;color:#999;font-size:10px;border-top:1px solid #e8e8e8;background:#fff}
+.alts-wrap{margin:0 12px 4px 50px;border:1px solid #fff1e6;border-radius:8px;overflow:hidden;background:#fffbf5}
+.alts-hdr{font-size:10px;color:#d48806;font-weight:700;padding:5px 10px;background:#fff8ef;cursor:pointer;user-select:none;display:flex;justify-content:space-between;align-items:center}
+.alts-hdr .arr{transition:transform .2s;font-size:8px}
+.alts-wrap.open .alts-hdr .arr{transform:rotate(180deg)}
+.alts-list{display:none;padding:2px 0}.alts-wrap.open .alts-list{display:block}
+.alt-item{display:flex;align-items:flex-start;gap:8px;padding:5px 10px;font-size:10px;border-top:1px solid #fff1e6;cursor:default;transition:background .15s}
+.alt-item:hover{background:#fff3e0}
+.alt-num{background:#f59e0b;color:#fff;font-size:8px;font-weight:700;min-width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.alt-info{flex:1}
+.alt-name{font-weight:700;color:#1a1a1a}
+.alt-desc{color:#666;margin-top:1px;line-height:1.3}
+.alt-price{color:#059669;font-weight:600}
+.alt-tag{display:inline-block;font-size:8px;padding:1px 5px;border-radius:3px;margin-left:4px;font-weight:600}
+.alt-tag.pick{background:#fff1f0;color:#d4380d}.alt-tag.michelin{background:#fef3c7;color:#92400e}.alt-tag.local{background:#dcfce7;color:#166534}.alt-tag.vibe{background:#ede9fe;color:#5b21b6}
 .pack-wrap{padding:20px 24px;background:#fff;border-top:1px solid #e8e8e8}
 .pack-wrap h3{font-size:15px;margin-bottom:6px}
 .pack-progress{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding:10px 14px;background:#fff8f0;border-radius:8px;border:1px solid #ffe0b2}
@@ -255,14 +269,26 @@ A:[
 {t:"10:40",name:"하노이 도착",desc:"노이바이 T2, 입국심사+수하물 ~40분",type:"move",coords:[21.2212,105.8070]},
 {t:"11:30",name:"공항→시내 Grab",desc:"~300,000₫/대, T2 Pillar 7 픽업",type:"move",coords:[21.0334,105.8479]},
 {t:"12:00",name:"르 샤토 호텔 짐맡기기",desc:"23-25 Hàng Thiếc, 체크인 14시 전 짐보관",type:"hotel",coords:[21.0334,105.8479]},
-{t:"12:30",name:"점심: Phở Gia Truyền",desc:"49 Bát Đàn, 70년 전통 미슐랭 추천, ~50,000₫",type:"food",coords:[21.0338,105.8468],tip:"💡 현금만. 셀프서비스. 맑고 깊은 육수가 특징"},
+{t:"12:30",name:"점심: Phở Gia Truyền",desc:"49 Bát Đàn, 70년 전통 미슐랭 추천, ~50,000₫",type:"food",coords:[21.0338,105.8468],tip:"💡 현금만. 셀프서비스. 맑고 깊은 육수가 특징",alts:[
+{name:"Phở 10 Lý Quốc Sư",desc:"10 Lý Quốc Sư, 관광객 친화적, 영어메뉴",price:"~65,000₫",tags:["michelin","미슐랭 빕"]},
+{name:"Phở Thìn Bờ Hồ",desc:"61 Đinh Tiên Hoàng, 호안끼엠 호수뷰, 볶은 소고기 쌀국수",price:"~60,000₫",tags:["local","로컬맛집"]},
+{name:"Bún Chả Hàng Mành",desc:"1 Hàng Mành, 쌀국수 대신 분짜로 변경 가능",price:"~70,000₫",tags:["michelin","미슐랭"]}
+]},
 {t:"13:30",name:"호안끼엠 호수 산책",desc:"둘레 1.8km, 거북탑(Tháp Rùa) 감상",type:"spot",coords:[21.0285,105.8522]},
 {t:"14:15",name:"응옥선 사원 (Ngọc Sơn)",desc:"태양다리(Thê Húc) 건너 입장, 30,000₫",type:"spot",coords:[21.0301,105.8525]},
 {t:"15:00",name:"성요셉 대성당",desc:"40 Nhà Chung, 1886년 네오고딕 양식",type:"spot",coords:[21.0288,105.8490],tip:"💡 내부는 미사시간만(평일 05:30,18:15). 외관+주변카페거리"},
-{t:"15:30",name:"콩카페 (Cộng Cà Phê)",desc:"군대테마, 코코넛커피 ~55,000₫",type:"food",coords:[21.0330,105.8500]},
+{t:"15:30",name:"콩카페 (Cộng Cà Phê)",desc:"군대테마, 코코넛커피 ~55,000₫",type:"food",coords:[21.0330,105.8500],alts:[
+{name:"Café Giảng (에그커피 원조)",desc:"39 Nguyễn Hữu Huân, 1946 원조 에그커피",price:"~35,000₫",tags:["pick","원조"]},
+{name:"Café Đinh",desc:"13 Đinh Tiên Hoàng, 호안끼엠 호수뷰 2층",price:"~45,000₫",tags:["vibe","분위기"]},
+{name:"Loading T Café",desc:"8 Chân Cầm, 루프탑 뷰, 인스타 핫플",price:"~55,000₫",tags:["vibe","루프탑"]}
+]},
 {t:"16:30",name:"숙소 체크인 + 휴식",desc:"비행 피로 회복, 샤워",type:"hotel",coords:[21.0334,105.8479]},
 {t:"18:00",name:"36거리 + 야시장",desc:"Hàng Đào~Đồng Xuân, 금요일 18:00~23:00!",type:"hl",coords:[21.0365,105.8505],tip:"💡 Hàng Gai(실크), Hàng Bạc(은) 거리 탐방"},
-{t:"19:30",name:"저녁: Bún Chả Đắc Kim",desc:"1 Hàng Mành, 미슐랭 선정 분짜, ~70,000₫",type:"food",coords:[21.0325,105.8485],tip:"💡 게살 스프링롤(Nem cua bể) 꼭 추가!"},
+{t:"19:30",name:"저녁: Bún Chả Đắc Kim",desc:"1 Hàng Mành, 미슐랭 선정 분짜, ~70,000₫",type:"food",coords:[21.0325,105.8485],tip:"💡 게살 스프링롤(Nem cua bể) 꼭 추가!",alts:[
+{name:"Quán Ăn Ngon",desc:"18 Phan Bội Châu, 베트남 전통요리 올인원, 정원 분위기",price:"~120,000₫",tags:["vibe","가족추천"]},
+{name:"Bánh Cuốn Thanh Vân",desc:"12-14 Hàng Gà, 반꾸온+넴, 하노이 3대 반꾸온",price:"~50,000₫",tags:["local","로컬"]},
+{name:"Phở Cuốn Hàng Than",desc:"33 Ngũ Xã, 쌀국수 롤(퍼꾸온), 서호 근처",price:"~60,000₫",tags:["local","이색메뉴"]}
+]},
 {t:"20:30",name:"맥주거리 (Tạ Hiện St)",desc:"비어호이 ~10,000₫, 266m 나이트라이프",type:"food",coords:[21.0345,105.8520]},
 {t:"21:30",name:"호텔 복귀",desc:"",type:"",coords:[21.0334,105.8479]}
 ],cost:"~700K₫/인"},
@@ -272,11 +298,23 @@ A:[
 {t:"09:15",name:"호치민 묘소",desc:"무료, 줄 30~60분, 복장주의!",type:"spot",coords:[21.0369,105.8345],tip:"⚠️ 07:30~10:30 하절기. 토요일 OK. 반바지/민소매 금지. 카메라 보관소"},
 {t:"10:00",name:"못꼿 사원 (한기둥 사원)",desc:"1049년 건립, 연꽃형 단일기둥 사원",type:"spot",coords:[21.0358,105.8335]},
 {t:"10:30",name:"호치민 관저 (주석궁+고상가옥)",desc:"40,000₫, 잉어연못 산책",type:"spot",coords:[21.0380,105.8345]},
-{t:"11:30",name:"점심: Chả Cá Thăng Long",desc:"6B Đường Thành, 미슐랭 짜까, ~176,000₫",type:"food",coords:[21.0340,105.8460],tip:"💡 강황 메기+딜 테이블 조리. 처음이면 여기가 최고"},
+{t:"11:30",name:"점심: Chả Cá Thăng Long",desc:"6B Đường Thành, 미슐랭 짜까, ~176,000₫",type:"food",coords:[21.0340,105.8460],tip:"💡 강황 메기+딜 테이블 조리. 처음이면 여기가 최고",alts:[
+{name:"Chả Cá Lã Vọng (원조)",desc:"14 Chả Cá St, 1871년 원조 짜까, 거리 이름의 유래",price:"~200,000₫",tags:["pick","원조"]},
+{name:"Bún Chả Hương Liên (오바마)",desc:"24 Lê Văn Hưu, 오바마가 방문한 분짜",price:"~130,000₫",tags:["michelin","오바마"]},
+{name:"Bánh Mì 25",desc:"25 Hàng Cá, 하노이 최고 반미, 가볍게 해결",price:"~30,000₫",tags:["local","간편"]}
+]},
 {t:"13:00",name:"탕롱 황성 (Imperial Citadel)",desc:"UNESCO 세계유산, 30,000₫",type:"spot",coords:[21.0410,105.8400],tip:"💡 11세기 베트남 왕궁터. 발굴유적+박물관 ~1시간"},
 {t:"14:30",name:"하노이 문묘 (국자감)",desc:"58 Quốc Tử Giám, 70,000₫, 82개 석비",type:"spot",coords:[21.0275,105.8355],tip:"💡 5개 정원 순서대로 관람. ~1.5시간 소요"},
-{t:"16:00",name:"Café Đinh 에그커피",desc:"13 Đinh Tiên Hoàng, 호안끼엠 호수뷰",type:"food",coords:[21.0285,105.8525],tip:"💡 2층 창가석에서 호수 조망. 레트로 인테리어"},
-{t:"17:30",name:"저녁: Bún Bò Nam Bộ",desc:"67 Hàng Điếu, 국물없는 소고기쌀국수, ~55,000₫",type:"food",coords:[21.0365,105.8493]},
+{t:"16:00",name:"Café Đinh 에그커피",desc:"13 Đinh Tiên Hoàng, 호안끼엠 호수뷰",type:"food",coords:[21.0285,105.8525],tip:"💡 2층 창가석에서 호수 조망. 레트로 인테리어",alts:[
+{name:"Café Giảng (에그커피 원조)",desc:"39 Nguyễn Hữu Huân, 1946 원조, 골목 2층",price:"~35,000₫",tags:["pick","원조"]},
+{name:"Note Coffee",desc:"64 Lương Văn Can, 포스트잇 벽, 루프탑 호수뷰",price:"~45,000₫",tags:["vibe","인스타"]},
+{name:"Hanoi House Café",desc:"47 Lý Quốc Sư, 올드하우스 인테리어, 연유커피",price:"~50,000₫",tags:["vibe","분위기"]}
+]},
+{t:"17:30",name:"저녁: Bún Bò Nam Bộ",desc:"67 Hàng Điếu, 국물없는 소고기쌀국수, ~55,000₫",type:"food",coords:[21.0365,105.8493],alts:[
+{name:"Bún Ốc Bà Ngoại",desc:"6 Hàng Chai, 달팽이 쌀국수, 하노이 로컬 인기",price:"~45,000₫",tags:["local","로컬"]},
+{name:"Nem Cua Bể Hải Sản",desc:"Tạ Hiện St, 게살 스프링롤 전문, 맥주거리",price:"~80,000₫",tags:["local","해산물"]},
+{name:"Lẩu + Nướng 거리식당",desc:"Ma Mây St, 샤브샤브+그릴 세트, 가족식사 Good",price:"~150,000₫",tags:["vibe","가족추천"]}
+]},
 {t:"19:00",name:"기찻길 카페 (Train Street)",desc:"3 Trần Phú, 카페 통해 입장",type:"hl",coords:[21.0240,105.8420],tip:"💡 토 기차 19:30±15분. 음료 40,000~60,000₫ 주문 필수"},
 {t:"21:00",name:"호텔 복귀",desc:"⚠️ 21~22시 크루즈 차량정보 카톡 확인! 짐 준비",type:"warn",coords:[21.0334,105.8479]}
 ],cost:"~850K₫/인"},
@@ -306,7 +344,11 @@ A:[
 {t:"15:00",name:"롯데센터 전망대 (65층)",desc:"54 Liễu Giai, 하노이 최고 전망대",type:"spot",coords:[21.0272,105.8124],tip:"💡 65층 Sky Walk. 360도 조망. 입장료 ~230,000₫"},
 {t:"16:30",name:"쩐꾸옥 사원",desc:"46 Thanh Niên, 1500년 역사 최고 사원",type:"spot",coords:[21.0478,105.8367],tip:"⚠️ 08:00~11:30, 13:30~18:30. 점심시간 휴무"},
 {t:"17:00",name:"서호 (Hồ Tây) 산책",desc:"Thanh Niên 도로, 좌:쭉바익호 우:서호",type:"spot",coords:[21.0525,105.8290]},
-{t:"18:30",name:"저녁: Bún Chả Hương Liên",desc:"24 Lê Văn Hưu, 오바마 분짜, 130,000₫",type:"food",coords:[21.0170,105.8530],tip:"💡 미슐랭 선정. 오바마세트(분짜+튀김롤+맥주)"},
+{t:"18:30",name:"저녁: Bún Chả Hương Liên",desc:"24 Lê Văn Hưu, 오바마 분짜, 130,000₫",type:"food",coords:[21.0170,105.8530],tip:"💡 미슐랭 선정. 오바마세트(분짜+튀김롤+맥주)",alts:[
+{name:"Phở Thìn 13 Lò Đúc",desc:"13 Lò Đúc, 볶은 소고기 쌀국수, 뉴욕 진출",price:"~60,000₫",tags:["michelin","유명맛집"]},
+{name:"Quán Ăn Ngon",desc:"18 Phan Bội Châu, 베트남 전통요리 올인원 코트야드",price:"~120,000₫",tags:["vibe","가족추천"]},
+{name:"Nhà Hàng Cơm Việt",desc:"Đội Cấn 근처, 숙소 가까운 가정식 백반",price:"~80,000₫",tags:["local","숙소근처"]}
+]},
 {t:"20:00",name:"롯데마트 쇼핑",desc:"롯데센터 B1~B2, 식품관",type:"spot",coords:[21.0272,105.8124],tip:"💡 G7커피, 캐슈넛, 과일칩, 쌀국수 라면 추천"},
 {t:"21:30",name:"숙소 복귀",desc:"내일 닌빈 대비 일찍 취침",type:"",coords:[21.0370,105.8195]}
 ],cost:"~700K₫/인"},
@@ -317,12 +359,20 @@ A:[
 {t:"10:30",name:"이동 (15분)",desc:"바이딘→호아루",type:"move",coords:[20.2850,105.9750]},
 {t:"10:45",name:"호아루 올드타운 (Hoa Lư)",desc:"베트남 최초 수도(968~1010), 딘왕조+레왕조 사원, 20,000₫",type:"spot",coords:[20.2850,105.9750],tip:"💡 두 사원 모두 관람 ~45분. 역사 해설 있으면 더 좋음"},
 {t:"11:30",name:"이동 (10분)",desc:"호아루→짱안 근처 식당",type:"move",coords:[20.2506,105.9745]},
-{t:"11:40",name:"점심: 닌빈 염소고기 (Dê)",desc:"짱안 근처 식당, 염소구이+볶음+탕, ~150,000₫/인",type:"food",coords:[20.2500,105.9700],tip:"💡 Trung Tuyet 식당 추천. 염소고기는 닌빈 필수 특산"},
+{t:"11:40",name:"점심: 닌빈 염소고기 (Dê)",desc:"짱안 근처 식당, 염소구이+볶음+탕, ~150,000₫/인",type:"food",coords:[20.2500,105.9700],tip:"💡 Trung Tuyet 식당 추천. 염소고기는 닌빈 필수 특산",alts:[
+{name:"Trung Tuyet (쭝뚜옛)",desc:"짱안 입구 근처, 현지인 추천 1위, 염소구이+탕 세트",price:"~150,000₫",tags:["pick","1순위"]},
+{name:"Nhà Hàng Hoàng Lâm",desc:"짱안 선착장 앞, 접근성 최고, 관광객 친화",price:"~180,000₫",tags:["local","편리"]},
+{name:"Bé Đảo Restaurant",desc:"Tam Coc 근처, 논뷰 테라스, 분위기 식사",price:"~170,000₫",tags:["vibe","논뷰"]}
+]},
 {t:"12:30",name:"짱안 보트투어 (Trang An)",desc:"UNESCO, 동굴+석회암 절벽, 250,000₫/인, ~2시간",type:"spot",coords:[20.2506,105.9745],tip:"💡 루트2 추천 (2~2.5h, 덜 붐빔). 모자+선크림 필수. 킹콩 촬영지"},
 {t:"14:45",name:"이동 (20분) + 카페 휴식",desc:"짱안→항무아 근처, 엄마 체력 회복 타임",type:"food",coords:[20.2370,105.9619]},
 {t:"15:30",name:"항무아 전망대 (Hang Mua)",desc:"486계단, 100,000₫/인, 논+산 파노라마",type:"spot",coords:[20.2370,105.9619],tip:"⚠️ 엄마 중간 전망대까지만도 OK. 정상은 석양 골든아워 최고 (일몰 ~18:15)"},
 {t:"17:15",name:"이동 (15분)",desc:"항무아→닌빈 시내 저녁",type:"move",coords:[20.2500,105.9700]},
-{t:"17:30",name:"저녁: 염소고기 + 닌빈 특산",desc:"Thang Long 또는 시내 식당, 산양구이+볶음밥",type:"food",coords:[20.2500,105.9700],tip:"💡 점심과 다른 메뉴로 — 산양갈비구이, 콤빈(닌빈 볶음밥) 추천"},
+{t:"17:30",name:"저녁: 닌빈 특산 2차",desc:"산양갈비구이+콤빈(볶음밥), ~150,000₫/인",type:"food",coords:[20.2500,105.9700],tip:"💡 점심과 다른 메뉴로 주문!",alts:[
+{name:"Thắng Long Restaurant",desc:"닌빈 시내, 산양갈비구이+콤빈 세트, 현지 인기",price:"~150,000₫",tags:["pick","1순위"]},
+{name:"Chookie's Beer Garden",desc:"닌빈 시내, 서양+베트남 퓨전, 크래프트 맥주",price:"~180,000₫",tags:["vibe","맥주"]},
+{name:"점심 식당 재방문",desc:"점심에 못 먹은 메뉴로 재주문, 이동시간 절약",price:"~150,000₫",tags:["local","효율적"]}
+]},
 {t:"18:30",name:"닌빈→하노이 복귀",desc:"프라이빗 차량, ~2.5시간, 차 안 수면 가능",type:"move",coords:[21.0370,105.8195]},
 {t:"21:00",name:"숙소 도착",desc:"⚠️ 짐정리! 내일 08:00 체크아웃",type:"warn",coords:[21.0370,105.8195]}
 ],cost:"~850K₫/인 (입장료+식비) + 차량 $100"},
@@ -426,7 +476,16 @@ const tag=s.type&&tagMap[s.type]?`<span class="${tagMap[s.type]}">${tagLabel[s.t
 const tipHtml=s.tip?`<tr class="tip-row"><td></td><td colspan="2">${s.tip}</td></tr>`:"";
 const cls=(s.type==="hl"?"highlight-row":"")+" sched-row";
 const cIdx=s.coords?coordIdx++:-1;
-schedHtml+=`<tr class="${cls}" data-ci="${cIdx}" onclick="highlightMarker(${di},${cIdx})"><td>${s.t}</td><td>${s.name}${tag}</td><td>${s.desc}</td></tr>${tipHtml}`;
+let altsHtml="";
+if(s.alts&&s.alts.length>0){
+const altsId=`alts_${di}_${si}`;
+let altsItems=s.alts.map((a,ai)=>{
+const aTags=a.tags?a.tags.map((t,ti)=>ti===0?`<span class="alt-tag ${t}">${a.tags[1]||t}</span>`:"").join(""):"";
+return `<div class="alt-item"><div class="alt-num">${ai+1}</div><div class="alt-info"><span class="alt-name">${a.name}</span> <span class="alt-price">${a.price}</span>${aTags}<div class="alt-desc">${a.desc}</div></div></div>`;
+}).join("");
+altsHtml=`<tr><td colspan="3" style="padding:0"><div class="alts-wrap" id="${altsId}"><div class="alts-hdr" onclick="this.parentElement.classList.toggle('open')">🍽️ 다른 식당 ${s.alts.length}곳 더보기 <span class="arr">▼</span></div><div class="alts-list">${altsItems}</div></div></td></tr>`;
+}
+schedHtml+=`<tr class="${cls}" data-ci="${cIdx}" onclick="highlightMarker(${di},${cIdx})"><td>${s.t}</td><td>${s.name}${tag}</td><td>${s.desc}</td></tr>${tipHtml}${altsHtml}`;
 });
 schedHtml+=`<tr class="cost-row"><td></td><td>💰 일 예상</td><td>${day.cost}</td></tr>`;
 const mapLinkHtml=day.mapLink?` <a class="map-link" href="${day.mapLink}" target="_blank" onclick="event.stopPropagation()">🗺️ 지도</a>`:"";
