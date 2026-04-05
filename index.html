@@ -266,9 +266,10 @@ const routeFlow=document.getElementById("routeFlow");
 const COURSES={
 A:[
 {day:1,date:"4/10 금",city:"인천→하노이",theme:"도착 + 구시가지",routeSummary:"✈️ 하노이 도착 + 구시가지 탐방",mapLink:"https://maps.app.goo.gl/Q65r8ikWfZMQShSu7",sched:[
-{t:"10:40",name:"하노이 도착",desc:"노이바이 T2, 입국심사+수하물 ~40분",type:"move",coords:[21.2212,105.8070]},
-{t:"11:30",name:"공항→시내 Grab",desc:"~300,000₫/대, T2 Pillar 7 픽업",type:"move",coords:[21.0334,105.8479]},
-{t:"12:00",name:"르 샤토 호텔 짐맡기기",desc:"23-25 Hàng Thiếc, 체크인 14시 전 짐보관",type:"hotel",coords:[21.0334,105.8479]},
+{t:"10:50",name:"하노이 도착",desc:"노이바이 T2, 에이전트 게이트 앞 대기",type:"move",coords:[21.2212,105.8070]},
+{t:"10:55",name:"패스트트랙 입국심사",desc:"전용 우선 레인 → 수하물 수취 → 세관 (~15분)",type:"move",coords:[21.2212,105.8070],tip:"💡 패스트트랙+픽업 올인원. 에이전트가 입국→차량까지 동행"},
+{t:"11:15",name:"픽업 차량 탑승→시내",desc:"전용 차량, ~40분 소요",type:"move",coords:[21.0334,105.8479]},
+{t:"11:55",name:"르 샤토 호텔 짐맡기기",desc:"23-25 Hàng Thiếc, 체크인 14시 전 짐보관",type:"hotel",coords:[21.0334,105.8479]},
 {t:"12:30",name:"점심: Phở Gia Truyền",desc:"49 Bát Đàn, 70년 전통 미슐랭 추천, ~50,000₫",type:"food",coords:[21.0338,105.8468],tip:"💡 현금만. 셀프서비스. 맑고 깊은 육수가 특징",alts:[
 {name:"Phở 10 Lý Quốc Sư",desc:"10 Lý Quốc Sư, 관광객 친화적, 영어메뉴",price:"~65,000₫",tags:["michelin","미슐랭 빕"],coords:[21.0288,105.8490]},
 {name:"Phở Thìn Bờ Hồ",desc:"61 Đinh Tiên Hoàng, 호안끼엠 호수뷰, 볶은 소고기 쌀국수",price:"~60,000₫",tags:["local","로컬맛집"],coords:[21.0290,105.8527]},
@@ -393,7 +394,7 @@ A:[
 // CALENDAR DATA per course
 const CAL_DATA={
 A:{
-10:{city:"인천→하노이",detail:"10:40 도착\nGrab→르샤토호텔\n구시가지+야시장",transport:"Grab 40분",nights:"르샤토 1N"},
+10:{city:"인천→하노이",detail:"10:50 도착\n패스트트랙+픽업\n구시가지+야시장",transport:"픽업 40분",nights:"르샤토 1N"},
 11:{city:"하노이 역사투어",detail:"묘소+탕롱황성+문묘\n기찻길카페",nights:"르샤토 2N"},
 12:{city:"→하롱베이",detail:"08:00 픽업\n그랜드 파이어니스",transport:"리무진 3h",nights:"크루즈"},
 13:{city:"하롱베이→하노이",detail:"11:00 하선\n롯데센터전망대+서호",transport:"리무진 3h",nights:"파이브 1N"},
@@ -406,7 +407,7 @@ A:{
 const TRANSPORT_DATA={
 A:[
 {day:"D1",route:"인천→하노이",mode:"KE441 직항",time:"4h50m",cost:"429,200원/인",note:"A330-300 (기종변경), 수하물 1개"},
-{day:"D1",route:"공항→르 샤토 호텔",mode:"Grab",time:"40분",cost:"~300,000₫",note:"T2 Pillar 7"},
+{day:"D1",route:"공항→르 샤토 호텔",mode:"패스트트랙+픽업",time:"40분",cost:"~7만원/3인",note:"올인원 패키지 (입국+차량)"},
 {day:"D2",route:"시내 이동 (종일)",mode:"Grab+도보",time:"-",cost:"~200,000₫",note:"묘소 Grab, 나머지 도보"},
 {day:"D3",route:"르 샤토→하롱베이",mode:"크루즈 리무진",time:"~3h",cost:"포함",note:"08:00 픽업"},
 {day:"D3",route:"하롱베이 크루즈",mode:"그랜드 파이어니스",time:"1박",cost:"크루즈요금",note:"6성급, 올인클루시브"},
@@ -595,7 +596,7 @@ document.getElementById("budgetTotal").innerHTML=`<div class="item"><div class="
 
 // INFO
 [{title:"✈️ 항공편",items:["가는편: KE441 ICN 08:00→HAN 10:50 (4/10)","오는편: KE442 HAN 12:05→ICN 18:35 (4/15)","예약번호: E2Z37P | 좌석: 가는편 재배정 확인 필요 / 오는편 41D","기종: 가는편 A330-300 (변경) / 오는편 A321neo | 수하물: 1개/인"]},
-{title:"📱 통신 & 앱",items:["eSIM: Airalo 5GB/7일 ~14,000원","한국서 설치: Grab, Google Maps, Be","Grab: T2 Pillar 7 픽업존","카톡 stayhalong 채널 추가"]},
+{title:"📱 통신 & 앱",items:["eSIM: Airalo 5GB/7일 ~14,000원","한국서 설치: Grab, Google Maps, Be","도착: 패스트트랙+픽업 올인원 예약 완료","카톡 stayhalong 채널 추가"]},
 {title:"💱 환전",items:["1 KRW ≈ 17.6 VND","공항: 소액만 (50만VND ~26,000원)","본격환전: 구시가지 Hàng Bạc 금은방","ATM: VPBank/ACB 수수료 무료","500,000동(파란)≠20,000동(파란) 주의"]},
 {title:"🚕 교통",items:["Grab 필수 (요금확정, 바가지없음)","구시가지: 도보 OK (10~15분 이내)","러시아워: 07:30~09:00, 17:00~19:00","횡단: 일정 속도로 걷기 (멈추지말것!)","공항버스 86번: 45,000₫ (가성비)"]},
 {title:"🌦️ 날씨",items:["4월: 25~32°C, 습도 80%+","간헐적 소나기 → 우산 필수","통기성 좋은 옷 + 얇은 겉옷","호치민 묘소: 반바지/민소매 금지","편한 운동화 (도보 많음)"]},
