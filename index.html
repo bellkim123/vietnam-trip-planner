@@ -246,7 +246,7 @@ const routeFlow=document.getElementById("routeFlow");
 ["ICN","→","하노이(2N)","→","하롱베이(1N)","→","하노이(2N)","→","닌빈(당일)","→","하노이","→","ICN"].forEach(r=>{if(r==="→"){const a=document.createElement("span");a.className="route-arrow";a.textContent="→";routeFlow.appendChild(a);}else{const d=document.createElement("span");d.className="route-city"+(["하노이(2N)","하롱베이(1N)","하노이(2N)"].includes(r)?" overnight":"");d.textContent=r;routeFlow.appendChild(d);}});
 
 // STATS
-[{l:"총 기간",v:"5N 6D",s:"4/10~4/15"},{l:"항공",v:"KE 441/442",s:"A321neo 직항"},{l:"예산(1인)",v:"~185만원",s:"항공+숙소+현지"},{l:"도시",v:"3곳",s:"하노이·하롱베이·닌빈"},{l:"이동거리",v:"~480km",s:"하노이 기점 왕복"}].forEach(s=>{const d=document.createElement("div");d.className="stat";d.innerHTML=`<div class="label">${s.l}</div><div class="value">${s.v}</div><div class="stat-sub">${s.s}</div>`;document.getElementById("statsRow").appendChild(d);});
+[{l:"총 기간",v:"5N 6D",s:"4/10~4/15"},{l:"항공",v:"KE 441/442",s:"A321neo 직항"},{l:"예산(1인)",v:"~147만원",s:"항공43+숙소62+현지42"},{l:"도시",v:"3곳",s:"하노이·하롱베이·닌빈"},{l:"이동거리",v:"~480km",s:"하노이 기점 왕복"}].forEach(s=>{const d=document.createElement("div");d.className="stat";d.innerHTML=`<div class="label">${s.l}</div><div class="value">${s.v}</div><div class="stat-sub">${s.s}</div>`;document.getElementById("statsRow").appendChild(d);});
 
 // COURSE DATA
 const COURSES={
@@ -458,7 +458,7 @@ document.querySelectorAll(`[data-ci="${coordIdx}"]`).forEach(r=>{if(r.closest(`[
 const hotelContent=document.getElementById("hotelContent");
 const hotels=[
 {city:"하노이 (4/10~4/12)",nights:"2박",items:[{
-name:"르 샤토 호텔 & 스파",stars:5,price:"~142,000~205,000원/박",
+name:"르 샤토 호텔 & 스파",stars:5,price:"48만원/2박 (3인 합계)",
 addr:"23-25 Phố Hàng Thiếc, Hoàn Kiếm",
 desc:"올드쿼터 중심부. 호안끼엠 도보 8분. 리뷰 9.7/10 (1,085건). 무료 조식 포함. Sen Spa, Grandma Kitchen. 체크인 14:00 / 체크아웃 12:00",
 tags:["확정","5성급","올드쿼터","조식포함","9.7점"],confirmed:true,
@@ -466,7 +466,7 @@ links:[{t:"Booking.com",u:"https://www.booking.com/hotel/vn/hanoi-le-chateau.htm
 tips:"얼리체크인 WhatsApp 요청 (+84 94 320 3535). 4/12 08:00 체크아웃 전날 밤 프론트 고지."
 }]},
 {city:"하롱베이 (4/12~4/13)",nights:"1박",items:[{
-name:"그랜드 파이어니스 크루즈 (6성급)",stars:5,price:"~$240/2인 (Ocean Suite)",
+name:"그랜드 파이어니스 크루즈 (6성급)",stars:5,price:"100만원/1박 (3인 합계)",
 addr:"Port 1, Tuan Chau International Marina, Ha Long",
 desc:"슈퍼럭셔리 요트. 인피니티풀, Sky Bar, 스파, 3D골프. 식사 4끼(점심+저녁+조식+브런치), 승솟동굴, 루온동굴, 카약 포함. 무료 미니바 매일 리필.",
 tags:["확정","6성급","올인클루시브","스테이하롱"],confirmed:true,
@@ -474,7 +474,7 @@ links:[{t:"공식사이트",u:"https://grandpioneers.com",c:""},{t:"Booking.com"
 tips:"픽업 08:00 (차량정보 전날 밤). 여권 필수. 멀미약. 긴급: 070-4554-5185 / 카톡 stayhalong"
 }]},
 {city:"하노이 (4/13~4/15)",nights:"2박",items:[{
-name:"더 파이브 레지던스",stars:5,price:"~116,000~174,000원/박",
+name:"더 파이브 레지던스",stars:5,price:"39만원/2박 (3인 합계)",
 addr:"343-345 Đội Cấn, Ba Đình",
 desc:"5성급 서비스드 아파트. 리뷰 9.2/10 (286건). 넓은 객실(60~155㎡). 키치넷 완비. 실내수영장, 루프탑테라스, 스파. 무료 조식 포함. 체크인 14:00",
 tags:["확정","5성급","수영장","스파","넓은객실"],confirmed:true,
@@ -494,10 +494,25 @@ hotelContent.appendChild(div);
 });
 
 // BUDGET
-const budgetData=[{l:"항공",a:43,c:"#d4380d"},{l:"숙소",a:96,c:"#722ed1"},{l:"교통",a:7,c:"#0050b3"},{l:"식비",a:13,c:"#d48806"},{l:"관광",a:2,c:"#389e0d"},{l:"기타",a:7,c:"#9ca3af"}];
-const bMax=Math.max(...budgetData.map(b=>b.a));
-budgetData.forEach(b=>{const r=document.createElement("div");r.className="b-row";r.innerHTML=`<div class="lbl">${b.l}</div><div class="b-bar-wrap"><div class="b-bar" style="width:${Math.round(b.a/bMax*100)}%;background:${b.c}">${b.a}만</div></div><div class="amt">~${b.a}만원</div>`;document.getElementById("budgetBars").appendChild(r);});
-document.getElementById("budgetTotal").innerHTML=`<div class="item"><div class="val">~168만</div><div class="lbl">1인 최소</div></div><div class="item"><div class="val">~208만</div><div class="lbl">1인 최대</div></div><div class="item"><div class="val">~555만</div><div class="lbl">3인 합계(평균)</div></div>`;
+// BUDGET - 정확한 계산 (1VND ≈ 0.055원 기준)
+// 숙소: 르샤토 48만(3인합) + 크루즈 100만(3인합) + 더파이브 39만(3인합) = 187만/3 = 62.3만/인
+// 항공: 429,200원/인
+// 교통(Grab 등): D1 공항 30만₫÷3 + D2 시내 20만₫÷3 + D4 시내 15만₫÷3 + D6 공항 35만₫÷3 = 33.3만₫/인 ≒ 1.8만원 + 닌빈투어 150만₫/인 ≒ 8.3만원 = ~10만/인
+// 식비: D1 ~70만₫ + D2 ~85만₫ + D3 크루즈포함 + D4 ~50만₫ + D5 ~90만₫ + D6 ~10만₫ ≒ 305만₫/인 ≒ 17만원/인
+// 관광: 묘소(무료)+문묘7만₫+탕롱3만₫+롯데23만₫+짱안20만₫+항무아10만₫+바이딘5만₫+호아루 등 ≒ 80만₫/인 ≒ 4.5만원/인
+// 기타: 마사지30만₫+쇼핑+팁 등 ≒ ~10만원/인
+const budgetItems=[
+{l:"항공",a:43,detail:"KE441/442 왕복 429,200원/인",c:"#d4380d"},
+{l:"숙소",a:62,detail:"르샤토 16만 + 크루즈 33만 + 더파이브 13만 (÷3인)",c:"#722ed1"},
+{l:"식비",a:17,detail:"쌀국수~분짜~짜까 등 5일간",c:"#d48806"},
+{l:"교통",a:10,detail:"Grab ÷3 + 닌빈 투어 8만/인",c:"#0050b3"},
+{l:"관광",a:5,detail:"문묘+탕롱+롯데+짱안+항무아 등",c:"#389e0d"},
+{l:"기타",a:10,detail:"마사지, 쇼핑, 팁, 여유금",c:"#9ca3af"}
+];
+const bMax=Math.max(...budgetItems.map(b=>b.a));
+const bTotal=budgetItems.reduce((s,b)=>s+b.a,0);
+budgetItems.forEach(b=>{const r=document.createElement("div");r.className="b-row";r.innerHTML=`<div class="lbl">${b.l}</div><div class="b-bar-wrap"><div class="b-bar" style="width:${Math.round(b.a/bMax*100)}%;background:${b.c}">${b.a}만</div></div><div class="amt">~${b.a}만원 <span style="font-size:9px;color:#aaa">${b.detail}</span></div>`;document.getElementById("budgetBars").appendChild(r);});
+document.getElementById("budgetTotal").innerHTML=`<div class="item"><div class="val">~${bTotal}만</div><div class="lbl">1인 합계</div></div><div class="item"><div class="val">~${bTotal*3}만</div><div class="lbl">3인 합계</div></div><div class="item"><div class="val" style="font-size:14px">숙소 187만 (3인)<br>항공 129만 (3인)</div><div class="lbl">큰 지출 내역</div></div>`;
 
 // INFO
 [{title:"✈️ 항공편",items:["가는편: KE441 ICN 08:00→HAN 10:50 (4/10)","오는편: KE442 HAN 12:05→ICN 18:35 (4/15)","예약번호: E2Z37P | 좌석: 42D/41D","기종: A321neo | 수하물: 1개/인"]},
