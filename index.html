@@ -265,7 +265,7 @@ const routeFlow=document.getElementById("routeFlow");
 // COURSE DATA
 const COURSES={
 A:[
-{day:1,date:"4/10 금",city:"인천→하노이",theme:"도착 + 구시가지",routeSummary:"✈️ 하노이 도착 + 구시가지 탐방",mapLink:"https://maps.app.goo.gl/Q65r8ikWfZMQShSu7",sched:[
+{day:1,date:"4/10 금",city:"인천→하노이",theme:"도착 + 구시가지",routeSummary:"✈️ 하노이 도착 + 구시가지 탐방",mapLink:"https://maps.app.goo.gl/Yt3RKghYmtmGkyBr9",sched:[
 {t:"10:50",name:"하노이 도착",desc:"노이바이 T2, 에이전트 게이트 앞 대기",type:"move",coords:[21.2212,105.8070]},
 {t:"10:55",name:"패스트트랙 입국심사",desc:"전용 우선 레인 → 수하물 수취 → 세관 (~15분)",type:"move",coords:[21.2212,105.8070],tip:"💡 패스트트랙+픽업 올인원. 에이전트가 입국→차량까지 동행"},
 {t:"11:15",name:"픽업 차량 탑승→시내",desc:"전용 차량, ~40분 소요",type:"move",coords:[21.0334,105.8479]},
@@ -293,7 +293,7 @@ A:[
 {t:"20:30",name:"맥주거리 (Tạ Hiện St)",desc:"비어호이 ~10,000₫, 266m 나이트라이프",type:"food",coords:[21.0345,105.8520]},
 {t:"21:30",name:"호텔 복귀",desc:"",type:"",coords:[21.0334,105.8479]}
 ],cost:"~700K₫/인"},
-{day:2,date:"4/11 토",city:"하노이",theme:"역사 투어",routeSummary:"🚶 묘소→탕롱황성→문묘→기찻길",mapLink:"https://maps.app.goo.gl/AL3BWW7mtVHb6Rsb6",sched:[
+{day:2,date:"4/11 토",city:"하노이",theme:"역사 투어",routeSummary:"🚶 묘소→탕롱황성→문묘→기찻길",mapLink:"https://maps.app.goo.gl/zziZXgTybAfzEvBUA",sched:[
 {t:"07:00",name:"아침: 호텔 조식",desc:"르 샤토 무료 조식 포함",type:"food",coords:[21.0334,105.8479]},
 {t:"09:00",name:"Grab→호치민 묘소",desc:"~15분, 30,000₫",type:"move",coords:[21.0369,105.8345]},
 {t:"09:15",name:"호치민 묘소",desc:"무료, 줄 30~60분, 복장주의!",type:"spot",coords:[21.0369,105.8345],tip:"⚠️ 07:30~10:30 하절기. 토요일 OK. 반바지/민소매 금지. 카메라 보관소"},
@@ -311,11 +311,7 @@ A:[
 {name:"Note Coffee",desc:"64 Lương Văn Can, 포스트잇 벽, 루프탑 호수뷰",price:"~45,000₫",tags:["vibe","인스타"],coords:[21.0320,105.8500]},
 {name:"Hanoi House Café",desc:"47 Lý Quốc Sư, 올드하우스 인테리어, 연유커피",price:"~50,000₫",tags:["vibe","분위기"],coords:[21.0290,105.8488]}
 ]},
-{t:"17:30",name:"저녁: Bún Bò Nam Bộ",desc:"67 Hàng Điếu, 국물없는 소고기쌀국수, ~55,000₫",type:"food",coords:[21.0365,105.8493],alts:[
-{name:"Bún Ốc Bà Ngoại",desc:"6 Hàng Chai, 달팽이 쌀국수, 하노이 로컬 인기",price:"~45,000₫",tags:["local","로컬"],coords:[21.0360,105.8505]},
-{name:"Nem Cua Bể Hải Sản",desc:"Tạ Hiện St, 게살 스프링롤 전문, 맥주거리",price:"~80,000₫",tags:["local","해산물"],coords:[21.0345,105.8520]},
-{name:"Lẩu + Nướng 거리식당",desc:"Ma Mây St, 샤브샤브+그릴 세트, 가족식사 Good",price:"~150,000₫",tags:["vibe","가족추천"],coords:[21.0350,105.8515]}
-]},
+{t:"17:30",name:"저녁: Pizza 4P's",desc:"예약 완료, 하노이 인기 피자+파스타",type:"food",coords:[21.0290,105.8520],tip:"💡 예약 완료. 베트남 현지 인기 체인, 화덕피자+부라타"},
 {t:"19:00",name:"기찻길 카페 (Train Street)",desc:"3 Trần Phú, 카페 통해 입장",type:"hl",coords:[21.0240,105.8420],tip:"💡 토 기차 19:30±15분. 음료 40,000~60,000₫ 주문 필수"},
 {t:"21:00",name:"호텔 복귀",desc:"⚠️ 21~22시 크루즈 차량정보 카톡 확인! 짐 준비",type:"warn",coords:[21.0334,105.8479]}
 ],cost:"~850K₫/인"},
@@ -333,7 +329,7 @@ A:[
 {t:"19:00",name:"선상 갈라디너",desc:"해산물 코스 (포함)",type:"food",coords:[20.9101,107.1839]},
 {t:"21:00",name:"오징어 낚시",desc:"선상 야간 활동",type:"cruise",coords:[20.9101,107.1839]}
 ],cost:"크루즈포함"},
-{day:4,date:"4/13 월",city:"하롱베이→하노이",theme:"크루즈 하선 + 롯데센터",routeSummary:"🚐 11:00 하선→하노이 + 롯데전망대",mapLink:"https://maps.app.goo.gl/ANQ5YZtp2XTVQdgF6",sched:[
+{day:4,date:"4/13 월",city:"하롱베이→하노이",theme:"크루즈 하선 + 롯데센터",routeSummary:"🚐 11:00 하선→하노이 + 롯데전망대",mapLink:"https://maps.app.goo.gl/XGnddDZup3KnMpSz9",sched:[
 {t:"05:30",name:"일출 감상",desc:"갑판에서",type:"hl",coords:[20.9101,107.1839]},
 {t:"06:00",name:"타이치/요가",desc:"선상 프로그램",type:"cruise",coords:[20.9101,107.1839]},
 {t:"07:00",name:"조식 (포함)",desc:"",type:"food",coords:[20.9101,107.1839]},
@@ -345,37 +341,28 @@ A:[
 {t:"15:00",name:"롯데센터 전망대 (65층)",desc:"54 Liễu Giai, 하노이 최고 전망대",type:"spot",coords:[21.0272,105.8124],tip:"💡 65층 Sky Walk. 360도 조망. 입장료 ~230,000₫"},
 {t:"16:30",name:"쩐꾸옥 사원",desc:"46 Thanh Niên, 1500년 역사 최고 사원",type:"spot",coords:[21.0478,105.8367],tip:"⚠️ 08:00~11:30, 13:30~18:30. 점심시간 휴무"},
 {t:"17:00",name:"서호 (Hồ Tây) 산책",desc:"Thanh Niên 도로, 좌:쭉바익호 우:서호",type:"spot",coords:[21.0525,105.8290]},
-{t:"18:30",name:"저녁: Bún Chả Hương Liên",desc:"24 Lê Văn Hưu, 오바마 분짜, 130,000₫",type:"food",coords:[21.0170,105.8530],tip:"💡 미슐랭 선정. 오바마세트(분짜+튀김롤+맥주)",alts:[
-{name:"Phở Thìn 13 Lò Đúc",desc:"13 Lò Đúc, 볶은 소고기 쌀국수, 뉴욕 진출",price:"~60,000₫",tags:["michelin","유명맛집"],coords:[21.0130,105.8580]},
-{name:"Quán Ăn Ngon",desc:"18 Phan Bội Châu, 베트남 전통요리 올인원 코트야드",price:"~120,000₫",tags:["vibe","가족추천"],coords:[21.0245,105.8480]},
-{name:"Nhà Hàng Cơm Việt",desc:"Đội Cấn 근처, 숙소 가까운 가정식 백반",price:"~80,000₫",tags:["local","숙소근처"],coords:[21.0365,105.8200]}
-]},
+{t:"18:30",name:"저녁: Chào Bạn (짜오반)",desc:"서호 근처, 베트남 레스토랑, 예약 완료",type:"food",coords:[21.0671,105.8243],tip:"💡 서호 분위기 식당. 더 파이브에서 Grab 15분. 메뉴 맘에 안 들면 식당 변경 가능"},
 {t:"20:00",name:"롯데마트 쇼핑",desc:"롯데센터 B1~B2, 식품관",type:"spot",coords:[21.0272,105.8124],tip:"💡 G7커피, 캐슈넛, 과일칩, 쌀국수 라면 추천"},
 {t:"21:30",name:"숙소 복귀",desc:"내일 닌빈 대비 일찍 취침",type:"",coords:[21.0370,105.8195]}
 ],cost:"~700K₫/인"},
-{day:5,date:"4/14 화",city:"닌빈 당일치기",theme:"바이딘→짱안→항무아(석양)→호아루 풀코스",routeSummary:"🚐 프라이빗 차량 | 바이딘→짱안보트→항무아(석양)→호아루→저녁",mapLink:"https://maps.app.goo.gl/ekqabHbDRTJJUTx29",sched:[
-{t:"06:00",name:"기상 + 간단 아침",desc:"호텔 조식 or 전날 편의점 빵",type:"food",coords:[21.0370,105.8195]},
-{t:"06:30",name:"프라이빗 차량 출발",desc:"숙소 앞 픽업, 닌빈까지 ~2시간",type:"move",coords:[21.0370,105.8195],tip:"💡 프라이빗 7인승 $75~120/일. 그룹투어로 4곳 불가능"},
-{t:"08:30",name:"바이딘 사원 (Bái Đính)",desc:"동남아 최대 불교사원, 500개 불상, 입장 무료",type:"spot",coords:[20.2764,105.8735],tip:"💡 전동카 필수 (60,000₫/인). 오전 시원할 때 관람. ~2시간"},
-{t:"10:30",name:"이동 (15분)",desc:"바이딘→짱안 근처 식당",type:"move",coords:[20.2506,105.9745]},
-{t:"10:45",name:"점심: 닌빈 염소고기 (Dê)",desc:"짱안 근처 식당, 염소구이+볶음+탕, ~150,000₫/인",type:"food",coords:[20.2500,105.9700],tip:"💡 Trung Tuyet 식당 추천. 염소고기는 닌빈 필수 특산",alts:[
-{name:"Trung Tuyet (쭝뚜옛)",desc:"짱안 입구 근처, 현지인 추천 1위, 염소구이+탕 세트",price:"~150,000₫",tags:["pick","1순위"],coords:[20.2520,105.9730]},
-{name:"Nhà Hàng Hoàng Lâm",desc:"짱안 선착장 앞, 접근성 최고, 관광객 친화",price:"~180,000₫",tags:["local","편리"],coords:[20.2510,105.9740]},
-{name:"Bé Đảo Restaurant",desc:"Tam Coc 근처, 논뷰 테라스, 분위기 식사",price:"~170,000₫",tags:["vibe","논뷰"],coords:[20.2150,105.9400]}
-]},
-{t:"11:30",name:"짱안 보트투어 (Trang An)",desc:"UNESCO, 동굴+석회암 절벽, 250,000₫/인, ~2시간",type:"spot",coords:[20.2506,105.9745],tip:"💡 루트2 추천 (2~2.5h, 덜 붐빔). 모자+선크림 필수. 킹콩 촬영지"},
-{t:"13:45",name:"이동 (20분) + 카페 휴식",desc:"짱안→항무아 근처, 엄마 체력 회복 타임",type:"food",coords:[20.2370,105.9619]},
-{t:"14:30",name:"항무아 전망대 (Hang Mua)",desc:"486계단, 100,000₫/인, 논+산 파노라마",type:"spot",coords:[20.2370,105.9619],tip:"⚠️ 엄마 중간 전망대까지만도 OK. 오후 빛이 논밭에 비치면 최고"},
-{t:"16:00",name:"이동 (15분)",desc:"항무아→호아루",type:"move",coords:[20.2850,105.9750]},
-{t:"16:15",name:"호아루 올드타운 (Hoa Lư)",desc:"베트남 최초 수도(968~1010), 딘왕조+레왕조 사원, 20,000₫",type:"spot",coords:[20.2850,105.9750],tip:"💡 두 사원 관람 ~45분. 석양빛에 사원이 예쁨. 하루 마무리로 여유롭게"},
-{t:"17:00",name:"이동 (10분)",desc:"호아루→저녁 식당",type:"move",coords:[20.2500,105.9700]},
-{t:"17:15",name:"저녁: 닌빈 특산 2차",desc:"산양갈비구이+콤빈(볶음밥), ~150,000₫/인",type:"food",coords:[20.2500,105.9700],tip:"💡 점심과 다른 메뉴로 주문!",alts:[
-{name:"Thắng Long Restaurant",desc:"닌빈 시내, 산양갈비구이+콤빈 세트, 현지 인기",price:"~150,000₫",tags:["pick","1순위"],coords:[20.2530,105.9750]},
-{name:"Chookie's Beer Garden",desc:"닌빈 시내, 서양+베트남 퓨전, 크래프트 맥주",price:"~180,000₫",tags:["vibe","맥주"],coords:[20.2540,105.9760]},
-{name:"점심 식당 재방문",desc:"점심에 못 먹은 메뉴로 재주문, 이동시간 절약",price:"~150,000₫",tags:["local","효율적"],coords:[20.2520,105.9730]}
-]},
-{t:"18:15",name:"닌빈→하노이 복귀",desc:"프라이빗 차량, ~2.5시간, 차 안 수면 가능",type:"move",coords:[21.0370,105.8195]},
-{t:"20:45",name:"숙소 도착",desc:"⚠️ 짐정리! 내일 08:00 체크아웃",type:"warn",coords:[21.0370,105.8195]}
+{day:5,date:"4/14 화",city:"닌빈 당일치기",theme:"짱안→항무아→바이딘→호아루 풀코스",routeSummary:"🚐 프라이빗 차량 | 짱안보트→항무아→바이딘→저녁→호아루",mapLink:"https://maps.app.goo.gl/JjvhT1AjH9TrVT5A7",sched:[
+{t:"07:30",name:"숙소 출발",desc:"프라이빗 차량 픽업, 닌빈까지 ~2시간",type:"move",coords:[21.0370,105.8195],tip:"💡 프라이빗 7인승 $75~120/일. 4곳 풀코스는 그룹투어 불가"},
+{t:"09:30",name:"짱안 보트투어 (Trang An)",desc:"UNESCO, 동굴+석회암 절벽, 250,000₫/인",type:"spot",coords:[20.2506,105.9745],tip:"💡 보트 ~2.5시간. 모자+선크림 필수. 킹콩 촬영지"},
+{t:"12:00",name:"짱안 보트 끝",desc:"",type:"",coords:[20.2506,105.9745]},
+{t:"12:20",name:"점심: 반미쫀 CircleT",desc:"탐꼭 로드, 반미+반꾸온",type:"food",coords:[20.2170,105.9380],tip:"💡 누나 선택 식당 ①. 반미+반꾸온 전문"},
+{t:"13:00",name:"식사 끝 → 항무아 이동",desc:"~15분",type:"move",coords:[20.2370,105.9619]},
+{t:"13:15",name:"항무아 전망대 (Hang Mua)",desc:"486계단, 100,000₫/인, 논+산 파노라마",type:"spot",coords:[20.2370,105.9619],tip:"⚠️ 엄마 체력 고려 — 중간 전망대까지만도 OK. 여유있게 1.5시간 잡기"},
+{t:"14:30",name:"항무아 끝 → 바이딘 이동",desc:"~30분",type:"move",coords:[20.2764,105.8735]},
+{t:"15:00",name:"바이딘 사원 (Bái Đính)",desc:"동남아 최대 불교사원, 500개 불상, 입장 무료",type:"spot",coords:[20.2764,105.8735],tip:"💡 전동카 필수 (60,000₫/인). ~2시간 관람"},
+{t:"17:00",name:"바이딘 끝",desc:"",type:"",coords:[20.2764,105.8735]},
+{t:"17:00",name:"[선택A] 저녁식당 이동 (~40분)",desc:"Thao Beo Restaurant Bar 이동",type:"move",coords:[20.2170,105.9380]},
+{t:"17:40",name:"[선택A] 저녁: Thao Beo",desc:"탐꼭 근처, 염소고기+파인애플볶음밥 외 다양",type:"food",coords:[20.2170,105.9380],tip:"💡 누나 선택 식당 ②. 점심과 다른 메뉴로!"},
+{t:"18:15",name:"[선택A] 식사 끝 → 호아루 이동",desc:"~20분",type:"move",coords:[20.2850,105.9750]},
+{t:"18:35",name:"[선택A] 호아루 올드타운",desc:"외관 산책+주변 카페",type:"spot",coords:[20.2850,105.9750],tip:"⚠️ 호아루 매표 마감 ~16:30, 17:00 폐장. 이 시간엔 입장 불가 가능성 높음! 외관+주변 산책만 가능"},
+{t:"17:30",name:"[선택B] 호아루 이동 (~30분)",desc:"바이딘→호아루",type:"move",coords:[20.2850,105.9750]},
+{t:"17:30",name:"[선택B] 호아루 올드타운+주변 식사",desc:"관광+근처 식당에서 저녁, ~19:30까지",type:"spot",coords:[20.2850,105.9750],tip:"⚠️ 호아루 주변 식당 평이 좋지 않다는 후기 많음. 식사 퀄리티 vs 동선 효율 트레이드오프"},
+{t:"19:30",name:"닌빈→하노이 복귀",desc:"프라이빗 차량, ~2시간, 차 안 수면 가능",type:"move",coords:[21.0370,105.8195]},
+{t:"21:30",name:"숙소 도착",desc:"⚠️ 짐정리! 내일 08:00 체크아웃",type:"warn",coords:[21.0370,105.8195]}
 ],cost:"~850K₫/인 (입장료+식비) + 차량 $100"},
 {day:6,date:"4/15 수",city:"하노이→귀국",theme:"마지막 아침 + 귀국",routeSummary:"✈️ HAN 12:05→ICN 18:35",sched:[
 {t:"07:00",name:"기상+짐 정리",desc:"",type:"",coords:[21.0370,105.8195]},
@@ -397,8 +384,8 @@ A:{
 10:{city:"인천→하노이",detail:"10:50 도착\n패스트트랙+픽업\n구시가지+야시장",transport:"픽업 40분",nights:"르샤토 1N"},
 11:{city:"하노이 역사투어",detail:"묘소+탕롱황성+문묘\n기찻길카페",nights:"르샤토 2N"},
 12:{city:"→하롱베이",detail:"08:00 픽업\n그랜드 파이어니스",transport:"리무진 3h",nights:"크루즈"},
-13:{city:"하롱베이→하노이",detail:"11:00 하선\n롯데센터전망대+서호",transport:"리무진 3h",nights:"파이브 1N"},
-14:{city:"닌빈 풀코스",detail:"바이딘→짱안보트→항무아\n호아루+저녁",transport:"프라이빗 2h",nights:"파이브 2N"},
+13:{city:"하롱베이→하노이",detail:"11:00 하선\n롯데센터+서호\n저녁: 짜오반(예약)",transport:"리무진 3h",nights:"파이브 1N"},
+14:{city:"닌빈 풀코스",detail:"짱안→항무아→바이딘\n저녁→호아루",transport:"프라이빗 2h",nights:"파이브 2N"},
 15:{city:"하노이→귀국",detail:"08:15 공항출발\nKE442 12:05",transport:"Grab 40분"}
 },
 };
@@ -413,7 +400,7 @@ A:[
 {day:"D3",route:"하롱베이 크루즈",mode:"그랜드 파이어니스",time:"1박",cost:"크루즈요금",note:"6성급, 올인클루시브"},
 {day:"D4",route:"하롱베이→하노이",mode:"크루즈 리무진",time:"~3h",cost:"포함",note:"11:00 하선"},
 {day:"D4",route:"롯데센터+서호",mode:"Grab+도보",time:"-",cost:"~150,000₫",note:"전망대+쩐꾸옥사원"},
-{day:"D5",route:"하노이↔닌빈",mode:"프라이빗 차량",time:"왕복5h",cost:"$75~120/대",note:"4곳 풀코스, 그룹투어 불가"},
+{day:"D5",route:"하노이↔닌빈",mode:"프라이빗 차량",time:"왕복4h",cost:"$75~120/대",note:"짱안→항무아→바이딘→호아루 풀코스"},
 {day:"D6",route:"더 파이브→공항",mode:"Grab",time:"40분",cost:"~350,000₫",note:"08:15 출발"},
 {day:"D6",route:"하노이→인천",mode:"KE442 직항",time:"4h30m",cost:"포함",note:"12:05→18:35"}
 ],
